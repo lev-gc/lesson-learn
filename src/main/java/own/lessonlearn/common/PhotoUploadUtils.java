@@ -1,5 +1,9 @@
+package own.lessonlearn.common;
+
 /**
  * @author lev-gc
- *
  */
-package own.lessonlearn.common;
+
+public class PhotoUploadUtils {
+
+}
