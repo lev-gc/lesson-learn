@@ -7,8 +7,7 @@ public class RandomUtils {
 	/**
 	 * Generate a random String (a TimeStamp with some random number).
 	 * 
-	 * @param length
-	 *            length of random number without TimeStamp.
+	 * @param length length of random number without TimeStamp.
 	 * @return a random string.
 	 */
 	public static String generateRandomString(int length) {
