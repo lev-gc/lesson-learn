@@ -2,6 +2,9 @@ package own.lessonlearn.common;
 
 import java.util.Date;
 
+/**
+ * @author lev-gc
+ */
 public class RandomUtils {
 
 	/**

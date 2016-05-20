@@ -3,12 +3,15 @@ package own.lessonlearn.common;
 import java.io.File;
 import java.nio.file.Paths;
 
+/**
+ * @author lev-gc
+ */
 public class FileUtils {
 
 	/**
 	 * Delete file and the empty directory to this file on server.
 	 * 
-	 * @param position
+	 * @param position the file path from root
 	 */
 	public static void removeFileAndDir(String position) {
 		File srcFile = new File(Paths.get(getRootPath(), position).toString());
