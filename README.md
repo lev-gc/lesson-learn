@@ -1,2 +1,2 @@
 #  LessonLearn
-Here is the project to note the lesson learn of myself.
+Here is the project to mark the lesson learn of myself.

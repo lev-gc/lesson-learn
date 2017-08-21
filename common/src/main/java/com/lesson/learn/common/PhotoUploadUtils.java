@@ -2,7 +2,7 @@
  * Copyright (c) 2017. @author lev-gc
  */
 
-package own.lesson.learn.common;
+package com.lesson.learn.common;
 
 /**
  * <b><code>PhotoUploadUtils</code></b>
