@@ -1,3 +1,6 @@
 # Config of IDE
 /.idea
 *.iml
+
+# generate file
+*/target
