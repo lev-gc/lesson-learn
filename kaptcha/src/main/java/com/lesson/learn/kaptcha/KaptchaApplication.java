@@ -18,7 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since kaptcha 0.0.1
  */
 @SpringBootApplication
-public class Application {
+public class KaptchaApplication {
 
     /**
      * The entry point of application.
@@ -26,7 +26,7 @@ public class Application {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(KaptchaApplication.class, args);
     }
 
 }
