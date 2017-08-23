@@ -15,6 +15,7 @@
 	<modules>
         <module>../kaptcha</module>
         <module>../common</module>
+        <module>../logback</module>
     </modules>
 
     <build>
