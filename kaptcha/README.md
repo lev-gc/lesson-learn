@@ -3,7 +3,7 @@
 > The usage example of Kaptcha.
 
 How to start:
-1. Startup by Application.class
+1. Startup by KaptchaApplication.class
 2. open the url http://localhost:8180/kaptcha/
 
 How to config:
