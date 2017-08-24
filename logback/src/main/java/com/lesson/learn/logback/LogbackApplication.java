@@ -4,6 +4,8 @@
 
 package com.lesson.learn.logback;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,18 +17,26 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <b>Creation Time:</b> 2017/8/23 14:03.
  *
  * @author Elvis
- * @since logback 0.0.1
+ * @since lesson-learn 0.0.1
  */
 @SpringBootApplication
 public class LogbackApplication {
 
     /**
+     * The constant LOG.
+     *
+     * @since lesson-learn 0.0.1
+     */
+    private final static Logger LOG = LoggerFactory.getLogger(LogbackApplication.class);
+
+    /**
      * The entry point of application.
      *
      * @param args the input arguments
-     * @since logback 0.0.1
+     * @since lesson-learn 0.0.1
      */
     public static void main(String[] args) {
+        LOG.info("Application Start!");
         SpringApplication.run(LogbackApplication.class, args);
     }
 

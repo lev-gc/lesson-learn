@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017. @author lev-gc
+  -->
+
+<configuration>
+
+    <!-- Output to File day by day -->
+    <appender name="daily_file_log_appender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%date %-5level [%thread] %logger{10} [%file:%line] %msg %n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./../applogs/logback.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Output to console -->
+    <appender name="console_log_appender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger{36} - %highlight(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--Set level of special file/package-->
+    <logger name="com.lesson.learn.logback" level="DEBUG"/>
+
+    <!-- level and appender -->
+    <root level="WARN">
+        <appender-ref ref="console_log_appender"/>
+        <appender-ref ref="daily_file_log_appender"/>
+    </root>
+
+</configuration>
