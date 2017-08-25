@@ -16,6 +16,7 @@
         <module>../kaptcha</module>
         <module>../common</module>
         <module>../logback</module>
+        <module>../swagger-ui</module>
     </modules>
 
     <build>
