@@ -17,6 +17,7 @@
         <module>../common</module>
         <module>../logback</module>
         <module>../swagger-ui</module>
+        <module>../quartz</module>
     </modules>
 
     <build>
