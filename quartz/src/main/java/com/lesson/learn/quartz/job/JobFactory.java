@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 /**
  * <b><code>JobFactory</code></b>
  * <p/>
- * JobFactory
+ * The Bean of AdaptableJobFactory creating by AutowireCapableBeanFactory
  * <p/>
  * <b>Creation Time:</b> 2017/9/4 19:31.
  *

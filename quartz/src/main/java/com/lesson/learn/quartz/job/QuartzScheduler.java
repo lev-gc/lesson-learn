@@ -5,6 +5,8 @@
 package com.lesson.learn.quartz.job;
 
 import org.quartz.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +22,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class QuartzScheduler {
+
+    /**
+     * The constant LOG.
+     */
+    private static final Logger LOG = LoggerFactory.getLogger(QuartzScheduler.class);
 
     /**
      * The Scheduler.
@@ -43,41 +50,38 @@ public class QuartzScheduler {
      * @throws SchedulerException   the scheduler exception
      */
     public void start() throws InterruptedException, SchedulerException {
-        System.out.println("Start! Creating Jobs...");
+        LOG.info("Quartz Scheduler Start!");
         for (int i = 0; i < 20; i++) {
-            QuartzJob quartzJob = new QuartzJob();
-            quartzJob.setJobId(String.valueOf(i + 1));
-            quartzJob.setUpdateInterval(1);
-            String id = quartzJob.getJobId();
-            long updateInterval = quartzJob.getUpdateInterval();
+            long updateInterval = 1;
+            String jobId = String.valueOf(i + 1);
 
             JobDataMap jobDataMap = new JobDataMap();
-            jobDataMap.put("id", id);
-            jobDataMap.put("job", quartzJob);
+            jobDataMap.put("id", jobId);
+            // TODO: add what you need in QuartzJob to JobDataMap
+
             JobDetail jobDetail = JobBuilder.newJob(QuartzJob.class)
                     .usingJobData(jobDataMap)
-                    .withIdentity(id)
+                    .withIdentity(jobId)
                     .build();
             Trigger trigger = TriggerBuilder.newTrigger()
                     .forJob(jobDetail)
-                    .withSchedule(
-//                            CronScheduleBuilder.cronSchedule("0 0/" + updateInterval + " * * * ?")
-//                                    .withMisfireHandlingInstructionFireAndProceed()
-                            SimpleScheduleBuilder.repeatMinutelyForever((int) updateInterval)
-                                    .withMisfireHandlingInstructionNextWithRemainingCount()
-                    )
-                    .withIdentity(id + "_trigger")
+                    .withSchedule(SimpleScheduleBuilder.repeatMinutelyForever((int) updateInterval)
+                            .withMisfireHandlingInstructionNextWithRemainingCount())
+                    // TODO: you can also use CronScheduleBuilder if necessary:
+                    // TODO: CronScheduleBuilder.cronSchedule("0 0/" + updateInterval + " * * * ?").withMisfireHandlingInstructionFireAndProceed()
+                    .withIdentity(jobId + "_trigger")
                     .build();
             scheduler.scheduleJob(jobDetail, trigger);
         }
-        scheduler.start();
+        // TODO: if scheduler not set AutoStartup, start it by this:
+        // TODO: scheduler.start();
     }
 
     /**
      * Stop.
      */
-    public void stop() {
-        // TODO
+    public void stop() throws SchedulerException {
+        scheduler.shutdown();
     }
 
 }

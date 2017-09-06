@@ -7,7 +7,6 @@ package com.lesson.learn.quartz.job;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 
 /**
  * <b><code>QuartzJob</code></b>
@@ -22,36 +21,16 @@ import org.quartz.JobExecutionException;
 @DisallowConcurrentExecution
 public class QuartzJob implements Job {
 
-    private String jobId;
-
-    private long updateInterval;
-
-    public QuartzJob() {
-    }
-
+    /**
+     * Execute.
+     *
+     * @param jobExecutionContext the job execution context
+     */
     @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("jobID:" + jobExecutionContext.getJobDetail().getJobDataMap().get("id") + "[start!]" + jobExecutionContext.getScheduledFireTime());
-        System.out.println(jobExecutionContext.getTrigger().getKey().toString());
+    public void execute(JobExecutionContext jobExecutionContext) {
+        // TODO: you can get something you need from JobDataMap by JobExecutionContext
         ScheduleTask task = new ScheduleTask();
         task.run();
-        System.out.println("jobID:" + jobExecutionContext.getJobDetail().getJobDataMap().get("id") + "[end!]");
-    }
-
-    public String getJobId() {
-        return jobId;
-    }
-
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
-    }
-
-    public long getUpdateInterval() {
-        return updateInterval;
-    }
-
-    public void setUpdateInterval(long updateInterval) {
-        this.updateInterval = updateInterval;
     }
 
 }

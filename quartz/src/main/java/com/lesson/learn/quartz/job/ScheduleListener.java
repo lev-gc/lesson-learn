@@ -47,7 +47,8 @@ public class ScheduleListener implements ApplicationListener<ContextRefreshedEve
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         try {
             quartzScheduler.start();
-        } catch (InterruptedException | SchedulerException e) {
+        } catch (SchedulerException | InterruptedException e) {
+            // TODO: exception handler
             e.printStackTrace();
         }
     }

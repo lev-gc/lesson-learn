@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
-import java.io.IOException;
 import java.util.Properties;
 
 /**
@@ -26,34 +25,55 @@ import java.util.Properties;
 @Configuration
 public class QuartzConfig {
 
+    /**
+     * Set properties of QuartzProperties.
+     *
+     * @return the properties
+     */
     @Bean
-    public Properties quartzProperties() throws IOException {
+    public Properties quartzProperties() {
         Properties quartzProperties = new Properties();
-        //
+
         quartzProperties.setProperty("org.quartz.scheduler.instanceName", "DefaultQuartzScheduler");
         quartzProperties.setProperty("org.quartz.scheduler.rmi.export", "false");
         quartzProperties.setProperty("org.quartz.scheduler.rmi.proxy", "false");
         quartzProperties.setProperty("org.quartz.scheduler.wrapJobExecutionInUserTransaction", "false");
-        //
+
         quartzProperties.setProperty("org.quartz.threadPool.class", "org.quartz.simpl.SimpleThreadPool");
-        quartzProperties.setProperty("org.quartz.threadPool.threadCount", "5");
+        quartzProperties.setProperty("org.quartz.threadPool.threadCount", "20");
         quartzProperties.setProperty("org.quartz.threadPool.threadPriority", "5");
         quartzProperties.setProperty("org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread", "true");
-        //
-        quartzProperties.setProperty("org.quartz.jobStore.misfireThreshold", "60000");
+
+        quartzProperties.setProperty("org.quartz.jobStore.misfireThreshold", "1800000");
         quartzProperties.setProperty("org.quartz.jobStore.class", "org.quartz.simpl.RAMJobStore");
+
         return quartzProperties;
     }
 
+    /**
+     * set SchedulerFactoryBean to a Bean for auto init.
+     *
+     * @return the scheduler factory bean
+     */
     @Bean
-    public Scheduler scheduler(JobFactory jobFactory, Properties quartzProperties) throws Exception {
-        SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
-//        schedulerFactoryBean.setSchedulerFactoryClass(StdSchedulerFactory.class);
-//        schedulerFactoryBean.setAutoStartup(true);
-//        schedulerFactoryBean.setWaitForJobsToCompleteOnShutdown(false);
+    public SchedulerFactoryBean schedulerFactoryBean() {
+        return new SchedulerFactoryBean();
+    }
+
+    /**
+     * Set a Bean of Scheduler.
+     *
+     * @param schedulerFactoryBean the scheduler factory bean
+     * @param jobFactory           the job factory
+     * @param quartzProperties     the quartz properties
+     * @return the scheduler
+     */
+    @Bean
+    public Scheduler scheduler(SchedulerFactoryBean schedulerFactoryBean, JobFactory jobFactory, Properties quartzProperties) {
         schedulerFactoryBean.setJobFactory(jobFactory);
         schedulerFactoryBean.setQuartzProperties(quartzProperties);
-        schedulerFactoryBean.afterPropertiesSet();
+        schedulerFactoryBean.setAutoStartup(true);
+        schedulerFactoryBean.setWaitForJobsToCompleteOnShutdown(false);
         return schedulerFactoryBean.getScheduler();
     }
 

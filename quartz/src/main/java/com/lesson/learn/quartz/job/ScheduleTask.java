@@ -4,8 +4,6 @@
 
 package com.lesson.learn.quartz.job;
 
-import org.apache.commons.lang3.time.DateFormatUtils;
-
 /**
  * <b><code>ScheduleTask</code></b>
  * <p/>
@@ -31,11 +29,7 @@ public class ScheduleTask implements Runnable {
      */
     @Override
     public void run() {
-        try {
-            System.out.println(DateFormatUtils.format(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss.SSS"));
-            Thread.sleep(70000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // TODO: Do what you want to do by Quartz
     }
+
 }
