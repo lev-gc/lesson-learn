@@ -23,13 +23,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScheduleListener implements ApplicationListener<ContextRefreshedEvent> {
 
+    /**
+     * The Quartz scheduler.
+     */
     private final QuartzScheduler quartzScheduler;
 
+    /**
+     * Instantiates a new Schedule listener.
+     *
+     * @param quartzScheduler the quartz scheduler
+     */
     @Autowired
     public ScheduleListener(QuartzScheduler quartzScheduler) {
         this.quartzScheduler = quartzScheduler;
     }
 
+    /**
+     * On application event.
+     *
+     * @param contextRefreshedEvent the context refreshed event
+     */
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         try {
