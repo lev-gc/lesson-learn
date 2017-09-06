@@ -44,7 +44,7 @@ public class QuartzScheduler {
      */
     public void start() throws InterruptedException, SchedulerException {
         System.out.println("Start! Creating Jobs...");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             QuartzJob quartzJob = new QuartzJob();
             quartzJob.setJobId(String.valueOf(i + 1));
             quartzJob.setUpdateInterval(1);
@@ -58,15 +58,17 @@ public class QuartzScheduler {
                     .usingJobData(jobDataMap)
                     .withIdentity(id)
                     .build();
-            CronTrigger cronTrigger = TriggerBuilder.newTrigger()
+            Trigger trigger = TriggerBuilder.newTrigger()
                     .forJob(jobDetail)
                     .withSchedule(
-                            CronScheduleBuilder.cronSchedule("0 0/" + updateInterval + " * * * ?")
-                                    .withMisfireHandlingInstructionFireAndProceed()
+//                            CronScheduleBuilder.cronSchedule("0 0/" + updateInterval + " * * * ?")
+//                                    .withMisfireHandlingInstructionFireAndProceed()
+                            SimpleScheduleBuilder.repeatMinutelyForever((int) updateInterval)
+                                    .withMisfireHandlingInstructionNextWithRemainingCount()
                     )
-                    .withIdentity(System.currentTimeMillis() + "" + id + "_trigger")
+                    .withIdentity(id + "_trigger")
                     .build();
-            scheduler.scheduleJob(jobDetail, cronTrigger);
+            scheduler.scheduleJob(jobDetail, trigger);
         }
         scheduler.start();
     }
