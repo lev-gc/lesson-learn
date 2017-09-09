@@ -75,6 +75,7 @@ public class QuartzScheduler {
         }
         // TODO: if scheduler not set AutoStartup, start it by this:
         // TODO: scheduler.start();
+        scheduler.start();
     }
 
     /**

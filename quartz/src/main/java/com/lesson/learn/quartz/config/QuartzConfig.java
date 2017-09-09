@@ -51,29 +51,21 @@ public class QuartzConfig {
     }
 
     /**
-     * set SchedulerFactoryBean to a Bean for auto init.
-     *
-     * @return the scheduler factory bean
-     */
-    @Bean
-    public SchedulerFactoryBean schedulerFactoryBean() {
-        return new SchedulerFactoryBean();
-    }
-
-    /**
      * Set a Bean of Scheduler.
      *
-     * @param schedulerFactoryBean the scheduler factory bean
-     * @param jobFactory           the job factory
-     * @param quartzProperties     the quartz properties
+     * @param jobFactory       the job factory
+     * @param quartzProperties the quartz properties
      * @return the scheduler
+     * @throws Exception the exception
      */
     @Bean
-    public Scheduler scheduler(SchedulerFactoryBean schedulerFactoryBean, JobFactory jobFactory, Properties quartzProperties) {
+    public Scheduler scheduler(JobFactory jobFactory, Properties quartzProperties) throws Exception {
+        SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
         schedulerFactoryBean.setJobFactory(jobFactory);
         schedulerFactoryBean.setQuartzProperties(quartzProperties);
         schedulerFactoryBean.setAutoStartup(true);
         schedulerFactoryBean.setWaitForJobsToCompleteOnShutdown(false);
+        schedulerFactoryBean.afterPropertiesSet();
         return schedulerFactoryBean.getScheduler();
     }
 
