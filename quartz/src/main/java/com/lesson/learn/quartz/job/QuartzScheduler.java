@@ -50,7 +50,7 @@ public class QuartzScheduler {
      * @throws SchedulerException   the scheduler exception
      */
     public void start() throws InterruptedException, SchedulerException {
-        LOG.info("Quartz Scheduler Start!");
+        LOG.info("Quartz Scheduler Startup!");
         for (int i = 0; i < 20; i++) {
             long updateInterval = 1;
             String jobId = String.valueOf(i + 1);
@@ -72,10 +72,11 @@ public class QuartzScheduler {
                     .withIdentity(jobId + "_trigger")
                     .build();
             scheduler.scheduleJob(jobDetail, trigger);
+            // TODO: you can add time slot to all these jobs by this:
+            // TODO: Thread.sleep(1000);
         }
-        // TODO: if scheduler not set AutoStartup, start it by this:
+        // TODO: if AutoStartup of scheduler is false, start it by this:
         // TODO: scheduler.start();
-        scheduler.start();
     }
 
     /**

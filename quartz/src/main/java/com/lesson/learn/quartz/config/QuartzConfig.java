@@ -6,6 +6,7 @@ package com.lesson.learn.quartz.config;
 
 import com.lesson.learn.quartz.job.JobFactory;
 import org.quartz.Scheduler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
@@ -24,6 +25,21 @@ import java.util.Properties;
  */
 @Configuration
 public class QuartzConfig {
+
+    /**
+     * The Job factory.
+     */
+    private final JobFactory jobFactory;
+
+    /**
+     * Instantiates a new Quartz config.
+     *
+     * @param jobFactory the job factory
+     */
+    @Autowired
+    public QuartzConfig(JobFactory jobFactory) {
+        this.jobFactory = jobFactory;
+    }
 
     /**
      * Set properties of QuartzProperties.
@@ -51,22 +67,27 @@ public class QuartzConfig {
     }
 
     /**
-     * Set a Bean of Scheduler.
+     * Scheduler factory bean scheduler factory bean.
      *
-     * @param jobFactory       the job factory
-     * @param quartzProperties the quartz properties
-     * @return the scheduler
-     * @throws Exception the exception
+     * @return the scheduler factory bean
      */
     @Bean
-    public Scheduler scheduler(JobFactory jobFactory, Properties quartzProperties) throws Exception {
+    public SchedulerFactoryBean schedulerFactoryBean() {
         SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
         schedulerFactoryBean.setJobFactory(jobFactory);
-        schedulerFactoryBean.setQuartzProperties(quartzProperties);
-        schedulerFactoryBean.setAutoStartup(true);
+        schedulerFactoryBean.setQuartzProperties(quartzProperties());
         schedulerFactoryBean.setWaitForJobsToCompleteOnShutdown(false);
-        schedulerFactoryBean.afterPropertiesSet();
-        return schedulerFactoryBean.getScheduler();
+        return schedulerFactoryBean;
+    }
+
+    /**
+     * Set a Bean of Scheduler.
+     *
+     * @return the scheduler
+     */
+    @Bean
+    public Scheduler scheduler(){
+        return schedulerFactoryBean().getScheduler();
     }
 
 }
