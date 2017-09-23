@@ -47,21 +47,26 @@ public class GmailSender {
 
         Session session = Session.getInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("******@gmail.com", "********");
+                return new PasswordAuthentication("sender@gmail.com", "********");
             }
         });
 
         Message message = new MimeMessage(session);
         // From
-        message.setFrom(new InternetAddress("******@gmail.com", "Alias of sender"));
+        message.setFrom(new InternetAddress("sender@gmail.com", "Alias of sender"));
         // TO
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("receiver1@*****.com"));
-        // add To
-//        message.addRecipients(Message.RecipientType.TO, InternetAddress.parse("receiver2@*****.com"));
-        // Cc
-//        message.setRecipients(Message.RecipientType.CC, InternetAddress.parse("receiver3@*****.com"));
-        // Bcc
-//        message.setRecipients(Message.RecipientType.BCC, InternetAddress.parse("receiver4@*****.com"));
+        message.setRecipients(Message.RecipientType.TO, new InternetAddress[]{
+                new InternetAddress("ToReceiver1@*****.com", "Alias of TO receiver1"),
+                new InternetAddress("ToReceiver2@*****.com", "Alias of TO receiver2")
+        });
+        // CC
+        message.setRecipients(Message.RecipientType.CC, new InternetAddress[]{
+                new InternetAddress("CcReceiver@*****.com", "Alias of CC receiver")
+        });
+        // BCC
+        message.setRecipients(Message.RecipientType.BCC, new InternetAddress[]{
+                new InternetAddress("BccReceiver@*****.com", "Alias of BCC receiver")
+        });
 
         // set Title
         message.setSubject("JavaMail Test");
