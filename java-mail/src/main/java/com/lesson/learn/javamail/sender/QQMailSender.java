@@ -65,10 +65,13 @@ public class QQMailSender {
 
         // set Title
         message.setSubject("JavaMail Test");
-        // set Content
-        message.setText("Here is the mail send by JavaMail using QQMail[or exmail]!");
         // set Send Date
         message.setSentDate(new Date());
+
+        // set Content
+        message.setText("Here is the mail send by JavaMail using QQMail[or exmail]!");
+        // Note: or you can send email in html with setContent("html string","text/html")
+//        message.setContent("<h1>Here is the mail send by JavaMail using QQMail[or exmail]!</h1>","text/html");
 
         Transport.send(message);
     }

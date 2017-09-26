@@ -70,10 +70,13 @@ public class GmailSender {
 
         // set Title
         message.setSubject("JavaMail Test");
-        // set Content
-        message.setText("Here is the mail send by JavaMail using Gmail!");
         // set Send Date
         message.setSentDate(new Date());
+
+        // set Content
+        message.setText("Here is the mail send by JavaMail using Gmail!");
+        // Note: or you can send email in html with setContent("html string","text/html")
+//        message.setContent("<h1>Here is the mail send by JavaMail using Gmail!</h1>","text/html");
 
         Transport.send(message);
     }
