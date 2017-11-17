@@ -7,6 +7,16 @@ package com.lesson.learn.quartz;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * <b><code>QuartzApplication</code></b>
+ * <p/>
+ * Application
+ * <p/>
+ * <b>Creation Time:</b> 2017/9/4 19:31.
+ *
+ * @author Elvis
+ * @since lesson-learn 0.0.1
+ */
 @SpringBootApplication
 public class QuartzApplication {
 
