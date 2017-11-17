@@ -8,7 +8,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Swagger ui application.
+ * <b><code>SwaggerUiApplication</code></b>
+ * <p/>
+ * Swagger-UI Application
+ * <p/>
+ * <b>Creation Time:</b> 2017/11/17 12:08.
+ *
+ * @author Elvis
+ * @since lesson-learn 0.0.1
  */
 @SpringBootApplication
 public class SwaggerUiApplication {
@@ -19,7 +26,7 @@ public class SwaggerUiApplication {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-		SpringApplication.run(SwaggerUiApplication.class, args);
-	}
+        SpringApplication.run(SwaggerUiApplication.class, args);
+    }
 
 }
