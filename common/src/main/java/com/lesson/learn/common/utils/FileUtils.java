@@ -2,7 +2,7 @@
  * Copyright (c) 2018. @author lev-gc
  */
 
-package com.lesson.learn.common;
+package com.lesson.learn.common.utils;
 
 import java.io.File;
 import java.nio.file.Paths;
