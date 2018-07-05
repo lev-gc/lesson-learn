@@ -19,6 +19,7 @@
         <module>../logback</module>
         <module>../swagger-ui</module>
         <module>../quartz</module>
+        <module>../lombok</module>
     </modules>
 
     <build>
