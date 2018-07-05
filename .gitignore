@@ -1,5 +1,6 @@
-/*
-!/src
-!/pom.xml
-!/.gitignore
-!/README.md
+# Config of IDE
+/.idea
+*.iml
+
+# generate file
+*/target
