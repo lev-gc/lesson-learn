@@ -12,7 +12,7 @@ package com.lesson.learn.quartz.job;
  * <b>Creation Time:</b> 2017/9/4 15:25.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since quartz 0.1.0
  */
 public class ScheduleTask implements Runnable {
 

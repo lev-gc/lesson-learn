@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
  * <b>Creation Time:</b> 2017/9/4 15:59.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since quartz 0.1.0
  */
 @Component
 public class QuartzScheduler {

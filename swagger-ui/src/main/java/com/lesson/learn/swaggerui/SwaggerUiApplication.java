@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <b>Creation Time:</b> 2017/11/17 12:08.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since swagger-ui 0.1.0
  */
 @SpringBootApplication
 public class SwaggerUiApplication {

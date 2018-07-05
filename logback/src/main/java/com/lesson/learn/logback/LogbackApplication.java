@@ -17,15 +17,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <b>Creation Time:</b> 2017/8/23 14:03.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since logback 0.1.0
  */
 @SpringBootApplication
 public class LogbackApplication {
 
     /**
      * The constant LOG.
-     *
-     * @since lesson-learn 0.0.1
      */
     private final static Logger LOG = LoggerFactory.getLogger(LogbackApplication.class);
 
@@ -33,7 +31,6 @@ public class LogbackApplication {
      * The entry point of application.
      *
      * @param args the input arguments
-     * @since lesson-learn 0.0.1
      */
     public static void main(String[] args) {
         LOG.info("Application Start!");

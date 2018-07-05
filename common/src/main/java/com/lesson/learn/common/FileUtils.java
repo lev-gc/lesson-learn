@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. @author lev-gc
+ * Copyright (c) 2018. @author lev-gc
  */
 
 package com.lesson.learn.common;
@@ -15,8 +15,7 @@ import java.nio.file.Paths;
  * <b>Creation Time:</b> 2016/5/30 11:06.
  *
  * @author lev-gc
- * @version $Revision$ 2016/5/30 11:06.
- * @since LessonLearn 1.0
+ * @since common 0.1.0
  */
 public class FileUtils {
 

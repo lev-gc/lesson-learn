@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * <b>Creation Time:</b> 2017/11/17 12:11.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since swagger-ui 0.1.0
  */
 @RestController
 @Api(tags = "SwaggerUI", description = "SwaggerUI Template.")

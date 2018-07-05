@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <b>Creation Time:</b> 2017/9/21 9:42.
  *
  * @author Elvis
- * @since java-mail 0.0.1
+ * @since java-mail 0.1.0
  */
 @SpringBootApplication
 public class JavaMailApplication {

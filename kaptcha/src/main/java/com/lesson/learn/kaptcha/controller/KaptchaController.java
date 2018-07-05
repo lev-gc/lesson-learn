@@ -26,7 +26,7 @@ import java.io.ByteArrayOutputStream;
  * <b>Creation Time:</b> 2017/8/21 11:48.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since lesson-learn 0.1.0
  */
 @RestController
 public class KaptchaController {

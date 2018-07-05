@@ -19,7 +19,7 @@ import java.util.Properties;
  * <b>Creation Time:</b> 2017/9/21 10:20.
  *
  * @author Elvis
- * @since java-mail 0.0.1
+ * @since java-mail 0.1.0
  */
 public class GmailSender {
 

@@ -21,15 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
  * <b>Creation Time:</b> 2017/8/23 16:45.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since logback 0.1.0
  */
 @RestController
 public class LogbackController {
 
     /**
      * The constant LOG.
-     *
-     * @since lesson-learn 0.0.1
      */
     private final static Logger LOG = LoggerFactory.getLogger(LogbackController.class);
 
@@ -37,7 +35,6 @@ public class LogbackController {
      * To log something response entity.
      *
      * @return the response entity
-     * @since lesson-learn 0.0.1
      */
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<?> toLogSomething() {

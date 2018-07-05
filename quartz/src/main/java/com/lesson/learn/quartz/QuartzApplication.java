@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <b>Creation Time:</b> 2017/9/4 19:31.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since quartz 0.1.0
  */
 @SpringBootApplication
 public class QuartzApplication {

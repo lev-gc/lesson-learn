@@ -16,7 +16,7 @@ import org.quartz.JobExecutionContext;
  * <b>Creation Time:</b> 2017/9/4 16:14.
  *
  * @author Elvis
- * @since lesson-learn 0.0.1
+ * @since quartz 0.1.0
  */
 @DisallowConcurrentExecution
 public class QuartzJob implements Job {
