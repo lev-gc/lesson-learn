@@ -2,9 +2,6 @@
 
 > The usage example of Lombok.
 
-How to start:
-1. Startup by LogbackApplication.class
-2. open the url http://localhost:8180/logback/
+It's a handy but not perfect tool in my mind.
 
-
-see : http://www.w2bc.com/article/94182
+@link https://www.projectlombok.org/features/all
