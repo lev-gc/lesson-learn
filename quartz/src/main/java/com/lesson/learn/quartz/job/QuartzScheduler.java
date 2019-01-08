@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * <b><code>Scheduler</code></b>
+ * <b>QuartzScheduler</b>
  * <p/>
  * Scheduler
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 15:59.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 15:59
  */
 @Component
 public class QuartzScheduler {

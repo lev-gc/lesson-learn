@@ -17,14 +17,14 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * <b><code>SwaggerConfig</code></b>
+ * <b>SwaggerConfig</b>
  * <p/>
  * SwaggerConfig
  * <p/>
- * <b>Creation Time:</b> 2017/11/17 12:08.
  *
- * @author Elvis
- * @since swagger-ui 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/11/17 12:08
  */
 @Configuration
 @EnableSwagger2

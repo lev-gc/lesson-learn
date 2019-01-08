@@ -11,14 +11,14 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 /**
- * <b><code>ScheduleListener</code></b>
+ * <b>ScheduleListener</b>
  * <p/>
  * ScheduleListener
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 15:59.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 15:59
  */
 @Component
 public class ScheduleListener implements ApplicationListener<ContextRefreshedEvent> {

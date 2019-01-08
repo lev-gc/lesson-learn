@@ -10,14 +10,14 @@ import lombok.Setter;
 import java.io.Serializable;
 
 /**
- * <b><code>User</code></b>
+ * <b>User</b>
  * <p/>
  * User
  * <p/>
- * <b>Creation Time:</b> 2018/7/5 16:32.
  *
- * @author Elvis
- * @since lombok 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2018/7/5 16:32
  */
 //@Data // include @ToString,@EqualsAndHashCode,@Getter on all fields,@Setter on all non-final fields,@RequiredArgsConstructor
 @Getter // on all non-static fields

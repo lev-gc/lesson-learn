@@ -14,14 +14,14 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import java.util.Properties;
 
 /**
- * <b><code>QuartzConfig</code></b>
+ * <b>QuartzConfig</b>
  * <p/>
  * QuartzConfig
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 15:26.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 15:26
  */
 @Configuration
 public class QuartzConfig {

@@ -8,14 +8,14 @@ import java.io.File;
 import java.nio.file.Paths;
 
 /**
- * <b><code>FileUtils</code></b>
+ * <b>FileUtils</b>
  * <p/>
  * FileUtils
  * <p/>
- * <b>Creation Time:</b> 2016/5/30 11:06.
  *
  * @author lev-gc
- * @since common 0.1.0
+ * @version 0.1.0
+ * @date 2016/5/30 11:06
  */
 public class FileUtils {
 

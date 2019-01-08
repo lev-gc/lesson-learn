@@ -10,14 +10,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <b><code>CommonApplication</code></b>
+ * <b>CommonApplication</b>
  * <p/>
  * Application of the module Common
  * <p/>
- * <b>Creation Time:</b> 2018/7/4 12:14.
  *
- * @author Elvis
- * @since common 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2018/7/4 12:14
  */
 @SpringBootApplication
 public class CommonApplication {

@@ -8,14 +8,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <b><code>Application</code></b>
+ * <b>KaptchaApplication</b>
  * <p/>
  * Application of Kaptcha
  * <p/>
- * <b>Creation Time:</b> 2017/8/21 10:18.
  *
- * @author Elvis
- * @since kaptcha 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/8/21 10:18
  */
 @SpringBootApplication
 public class KaptchaApplication {

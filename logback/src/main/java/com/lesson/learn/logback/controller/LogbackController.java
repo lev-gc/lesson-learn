@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <b><code>LogbackController</code></b>
+ * <b>LogbackController</b>
  * <p/>
  * LogbackController
  * <p/>
- * <b>Creation Time:</b> 2017/8/23 16:45.
  *
- * @author Elvis
- * @since logback 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/8/23 16:45
  */
 @RestController
 public class LogbackController {

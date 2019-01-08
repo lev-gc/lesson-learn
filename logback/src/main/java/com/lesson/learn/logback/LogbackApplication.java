@@ -10,14 +10,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <b><code>LogbackApplication</code></b>
+ * <b>LogbackApplication</b>
  * <p/>
  * Application of Logback
  * <p/>
- * <b>Creation Time:</b> 2017/8/23 14:03.
  *
- * @author Elvis
- * @since logback 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/8/23 14:03
  */
 @SpringBootApplication
 public class LogbackApplication {

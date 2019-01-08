@@ -8,14 +8,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <b><code>QuartzApplication</code></b>
+ * <b>QuartzApplication</b>
  * <p/>
  * Application
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 19:31.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 19:31
  */
 @SpringBootApplication
 public class QuartzApplication {

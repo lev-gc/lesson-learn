@@ -12,14 +12,14 @@ import java.util.Date;
 import java.util.Properties;
 
 /**
- * <b><code>QQMailSender</code></b>
+ * <b>QQMailSender</b>
  * <p/>
  * the QQMail[exmail] sender
  * <p/>
- * <b>Creation Time:</b> 2017/9/21 10:20.
  *
- * @author Elvis
- * @since java-mail 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/21 10:20
  */
 public class QQMailSender {
 

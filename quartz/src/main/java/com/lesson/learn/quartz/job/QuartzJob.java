@@ -9,14 +9,14 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 
 /**
- * <b><code>QuartzJob</code></b>
+ * <b>QuartzJob</b>
  * <p/>
  * QuartzJob
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 16:14.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 16:14
  */
 @DisallowConcurrentExecution
 public class QuartzJob implements Job {

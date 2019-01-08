@@ -11,14 +11,14 @@ import org.springframework.scheduling.quartz.AdaptableJobFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * <b><code>JobFactory</code></b>
+ * <b>JobFactory</b>
  * <p/>
  * The Bean of AdaptableJobFactory creating by AutowireCapableBeanFactory
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 19:31.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 19:31
  */
 @Component
 public class JobFactory extends AdaptableJobFactory {

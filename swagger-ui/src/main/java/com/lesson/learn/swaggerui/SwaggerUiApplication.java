@@ -8,14 +8,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <b><code>SwaggerUiApplication</code></b>
+ * <b>SwaggerUiApplication</b>
  * <p/>
  * Swagger-UI Application
  * <p/>
- * <b>Creation Time:</b> 2017/11/17 12:08.
  *
- * @author Elvis
- * @since swagger-ui 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/11/17 12:08
  */
 @SpringBootApplication
 public class SwaggerUiApplication {

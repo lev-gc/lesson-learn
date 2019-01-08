@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <b><code>SwaggerUITemplateController</code></b>
+ * <b>SwaggerUITemplateController</b>
  * <p/>
  * SwaggerUI Controller
  * <p/>
- * <b>Creation Time:</b> 2017/11/17 12:11.
  *
- * @author Elvis
- * @since swagger-ui 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/11/17 12:11
  */
 @RestController
 @Api(tags = "SwaggerUI", description = "SwaggerUI Template.")

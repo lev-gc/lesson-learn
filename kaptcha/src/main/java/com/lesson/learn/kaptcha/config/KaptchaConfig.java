@@ -13,14 +13,14 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 /**
- * <b><code>KaptchaConfig</code></b>
+ * <b>KaptchaConfig</b>
  * <p/>
  * Kaptcha config.
  * <p/>
- * <b>Creation Time:</b> 2017/8/21 12:04.
  *
- * @author Elvis
- * @since lesson-learn 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/8/21 12:04
  */
 @Configuration
 public class KaptchaConfig {

@@ -5,14 +5,14 @@
 package com.lesson.learn.quartz.job;
 
 /**
- * <b><code>ScheduleTask</code></b>
+ * <b>ScheduleTask</b>
  * <p/>
  * ScheduleTask
  * <p/>
- * <b>Creation Time:</b> 2017/9/4 15:25.
  *
- * @author Elvis
- * @since quartz 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/9/4 15:25
  */
 public class ScheduleTask implements Runnable {
 

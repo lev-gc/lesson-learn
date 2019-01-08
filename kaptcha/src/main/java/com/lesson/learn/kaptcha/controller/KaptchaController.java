@@ -19,14 +19,14 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 
 /**
- * <b><code>KaptchaController</code></b>
+ * <b>KaptchaController</b>
  * <p/>
  * KaptchaController
  * <p/>
- * <b>Creation Time:</b> 2017/8/21 11:48.
  *
- * @author Elvis
- * @since lesson-learn 0.1.0
+ * @author lev-gc
+ * @version 0.1.0
+ * @date 2017/8/21 11:48
  */
 @RestController
 public class KaptchaController {
