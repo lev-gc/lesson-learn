@@ -1,4 +1,4 @@
-#  Kaptcha
+#  Logback
 
 > The usage example of Logback.
 
